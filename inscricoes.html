@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,6 +15,7 @@
     <!--Ícones-->
     <script src="https://kit.fontawesome.com/5892971926.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header>
         <img src="assets/logo.png" alt="logo da banda Spiritbox">
@@ -23,14 +25,51 @@
         </nav>
     </header>
 
-    <main>
-        
+    <main class="main-inscricoes">
+        <h1>Faça parte do fã-clube</h1>
+        <h2>Preencha suas informações abaixo para completar sua inscrição</h2>
+
+        <fieldset class="formulario">
+            <form action="" method="post">
+                <label for="nome" class="lables-form">Nome</label>
+                <input type="text" name="nome">
+
+                <label for="dtNascimento" class="lables-form">Data de nascimento</label>
+                <input type="date" name="dtNascimento" id="dtNascimento"><br>
+
+                <label for="email" class="lables-form">E-mail</label>
+                <input type="email" name="email" id="email">
+
+                <label for="telefone" class="lables-form">Telefone</label>
+                <input type="tel" name="telefone" id="telefone">
+
+                <legend class="lables-form">Sexo</legend>
+                <label class="lables-sexo" for="masculino">Masculino</label>
+                <input class="input-sexo" type="radio" name="sexo" value="masculino"><br>
+                <label class="lables-sexo" for="feminino">Feminino</label>
+                <input class="input-sexo" type="radio" name="sexo" value="feminino"><br>
+                <label class="lables-sexo" for="naoIdentificado">Prefiro não dizer</label>
+                <input class="input-sexo" type="radio" name="sexo" value="naoIdentificado"><br>
+
+                <div id="checkbox">
+                    <label for="check" class="lables-form">Desejo participar do fã-clube</label>
+                    <input type="checkbox" name="check" id="check"><br>
+                </div>
+
+                <div id="formulario-botoes">
+                    <input type="submit" value="Submit" class="botoes">
+                    <input type="reset" value="Limpar" class="botoes">
+                </div>
+            </form>
+        </fieldset>
     </main>
 
     <footer>
         <a href="https://www.instagram.com/spiritboxmusic/"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://open.spotify.com/artist/4MzJMcHQBl9SIYSjwWn8QW?autoplay=true"><i class="fa-brands fa-spotify"></i></a>
+        <a href="https://open.spotify.com/artist/4MzJMcHQBl9SIYSjwWn8QW?autoplay=true"><i
+                class="fa-brands fa-spotify"></i></a>
         <a href="https://www.youtube.com/channel/UCmWxquutalJ1ZjdmWLdlhSg"><i class="fa-brands fa-youtube"></i></a></i>
     </footer>
 </body>
+
 </html>

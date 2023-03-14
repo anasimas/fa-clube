@@ -11,23 +11,25 @@
 }
 
 body{
-    background-color: hsl(0, 0%, 9%);
+    background: linear-gradient(180deg, rgba(23,23,23,1) 54%, rgba(16,67,66,1) 98%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 header img{
-    max-width: 100px;
+    max-width: 60px;
 }
 
-.menu-itens{
+a{
     font-family: 'Nunito', sans-serif;
     font-style: italic;
     font-size: 20px;
-    color: #171717;
+    color: #FFFBFA;
     margin: 20px;
     transition: 0.3s;
 }
 
-.menu-itens:hover{
+a:hover{
     transform: scale(1.1);
 }
 
@@ -39,25 +41,65 @@ header{
 }
 
 main{
-    min-height: 480px;
+    min-height: 500px;
     width: 100%;
-}
-
-main img{
-    max-width: 500px;
-    border-radius: 30px;
-    margin-right: 50px;
 }
 
 #main-home{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 5%;
 }
 
-#text-home{
+#section01-home{
+    position: relative;
+    width: 100%;
+}
+
+#section01-home figcaption{
+    font-family: 'Bebas Neue', sans-serif;
+    color: hsl(12, 100%, 99%);
+    font-size: 150px;
+    position: absolute;
+    top: 50%;
+    left: 2%;
+}
+
+#section01-home p{
+    font-family: 'Nunito', sans-serif;
+    color: #FFFBFA;
+    font-size: 45px;
+    position: absolute;
+    top: 75%;
+    left: 2%;
+}
+
+#section01-home img{
+    width: 100%;
+}
+
+#section02-home, #section03-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: 100px;
+}
+
+#section02-home img, #section03-home img{
+    border-radius: 10px;
+    max-width: 400px;
+    max-height: 400px;
+    margin-top: 50px;
+}
+
+#descricao-section02, #descricao-section03{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     max-width: 300px;
+    margin: 30px;
 }
 
 h1{
@@ -101,19 +143,27 @@ i:hover{
 
 /* Configuração da página "Sobre" */
 
-#player-spotify{
+.main-sobre{
     display: flex;
-    justify-content: center;
-    padding: 5%;
+    flex-direction: column;
+    align-items: center;
+}
+
+iframe{
+    margin-top: 2%;
+}
+
+.h2-sobre{
+    margin: 5px;
 }
 
 #texto-sobre{
     max-width: 60%;
-    margin: 0 auto;
+    margin: 5px auto;
 }
 
 #tabela-disc{
-    margin: 0 auto;
+    margin: 5px auto;
 }
 
 .albums-sobre{
@@ -125,6 +175,7 @@ i:hover{
 table{
     background: linear-gradient(180deg, rgba(23,23,23,1) 0%, rgba(0,168,165,1) 51%, rgba(23,23,23,1) 100%);
     border-radius: 10px;
+    margin: 10px;
 }
 
 td, th{
@@ -136,4 +187,79 @@ td, th{
 
 td{
     border-top: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+/*Configuração da página de inscrições*/
+
+.main-inscricoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+fieldset{
+    border-radius: 5px;
+    max-width: 900px;
+    margin-top: 15px;
+}
+
+form{
+    padding: 8px;
+    max-width: 500px;
+}
+
+.lables-form{
+    font-family: 'Nunito', sans-serif;
+    font-style: italic;
+    font-size: 16px;
+    color: hsl(12, 100%, 99%);
+}
+
+.lables-sexo{
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    color: hsl(12, 100%, 99%);
+    margin-top: 3px;
+}
+
+input{
+    font-family: 'Nunito', sans-serif;
+    color: #171717;
+    border-radius: 3px;
+    border: none;
+    margin: 8px;
+}
+
+.input-sexo{
+    margin-top: 3px;
+}
+
+#telefone{
+    width: 180px;
+}
+
+#checkbox{
+    display: flex;
+    justify-content: center;
+}
+
+#formulario-botoes{
+    display: flex;
+    justify-content: center;
+}
+
+.botoes{
+    font-family: 'Nunito', sans-serif;
+    border: none;
+    border-radius: 3px;
+    background-color: #00a8a5;
+    color: #FFFBFA;
+    width: 80px;
+    height: 30px;
+    transition: 0.3s;
+}
+
+.botoes:hover{
+    transform: scale(1.1);
 }
