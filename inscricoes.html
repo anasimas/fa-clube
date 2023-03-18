@@ -14,6 +14,9 @@
 
     <!--Ícones-->
     <script src="https://kit.fontawesome.com/5892971926.js" crossorigin="anonymous"></script>
+
+    <!--JS-->
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -30,7 +33,7 @@
         <h2>Preencha suas informações abaixo para completar sua inscrição</h2>
 
         <fieldset class="formulario">
-            <form action="" method="post">
+            <form name="cadastro" action=# method="post" onsubmit="return validaFormulario()">
                 <label for="nome" class="lables-form">Nome</label>
                 <input type="text" name="nome">
 
@@ -48,12 +51,12 @@
                 <input class="input-sexo" type="radio" name="sexo" value="masculino"><br>
                 <label class="lables-sexo" for="feminino">Feminino</label>
                 <input class="input-sexo" type="radio" name="sexo" value="feminino"><br>
-                <label class="lables-sexo" for="naoIdentificado">Prefiro não dizer</label>
-                <input class="input-sexo" type="radio" name="sexo" value="naoIdentificado"><br>
+                <label class="lables-sexo" for="naoIdentificado">Outro</label>
+                <input class="input-sexo" type="radio" name="sexo" value="outro"><br>
 
                 <div id="checkbox">
                     <label for="check" class="lables-form">Desejo participar do fã-clube</label>
-                    <input type="checkbox" name="check" id="check"><br>
+                    <input type="checkbox" name="check" id="check" value="checked"><br>
                 </div>
 
                 <div id="formulario-botoes">
