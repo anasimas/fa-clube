@@ -1,12 +1,16 @@
 function validaFormulario(){
     // validação do campo nome
-    if(document.cadastro.nome.value==""){
-        alert("Preencha o campo Nome.");
+    var nome = document.cadastro.nome.value;
+    var regExpNome = new RegExp("^[A-zÀ-ü]{2,}([ ]{1}[A-zÀ-ü]{2,})+$")
+    if(!regExpNome.test(nome)){
+        alert("Preencha o campo Nome corretamente.");
         document.cadastro.nome.focus();
         return false;
     }
 
     //validação do campo data de nascimento
+    var dataNascimento = document.cadastro.dtNascimento.value;
+    var regExpDtNasc = new RegExp //("^[0-9]{2}[/][0-9]{2}[/][0-9]{2,4}$")
     if(document.cadastro.dtNascimento.value==""){
         alert("Preencha o campo Data de nascimento.");
         document.cadastro.dtNascimento.focus();
@@ -21,8 +25,10 @@ function validaFormulario(){
     }
 
     //validação do campo telefone
-    if(document.cadastro.telefone.value==""){
-        alert("Preencha o campo Telefone.");
+    var fone = document.cadastro.telefone.value;
+    var regExpFone = new RegExp("^[(][1-9]{2}[)][0-9]{4,5}[-][0-9]{4}$");
+    if(!regExpFone.test(fone)){
+        alert("Preencha o campo Telefone corretamente.");
         document.cadastro.telefone.focus();
         return false;
     }
