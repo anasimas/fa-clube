@@ -10,16 +10,18 @@ function validaFormulario(){
 
     //validação do campo data de nascimento
     var dataNascimento = document.cadastro.dtNascimento.value;
-    var regExpDtNasc = new RegExp //("^[0-9]{2}[/][0-9]{2}[/][0-9]{2,4}$")
-    if(document.cadastro.dtNascimento.value==""){
-        alert("Preencha o campo Data de nascimento.");
+    var regExpDtNasc = new RegExp("^(0[1-9]|[12][0-9]|3[01])[\/.-](0[1-9]|1[012])[\/.-][12][0-9]{3}$")
+    if(!regExpDtNasc.test(dataNascimento)){
+        alert("Preencha o campo Data de nascimento corretamente.");
         document.cadastro.dtNascimento.focus();
         return false;
     }
 
     //validação do campo e-mail
-    if(document.cadastro.email.value==""){
-        alert("Preencha o campo E-mail.");
+    var email = document.cadastro.email.value;
+    var regExpEmail = new RegExp("\S+@\S+\.\S+");
+    if(!regExpEmail.test(email)){
+        alert("Preencha o campo E-mail corretamente.");
         document.cadastro.email.focus();
         return false;
     }
